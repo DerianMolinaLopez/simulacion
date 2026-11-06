@@ -30,6 +30,11 @@ public class ProductoController {
         return service.crear(producto.nombre(), producto.precio());
     }
 
+    @GetMapping("/buscar")
+    public List<Producto> buscarPorNombre(@RequestParam String q) {
+        return service.buscarPorNombre(q);
+    }
+
     @PostMapping("/total")
     public double total(@RequestBody List<Long> ids) {
         return service.calcularTotal(ids);

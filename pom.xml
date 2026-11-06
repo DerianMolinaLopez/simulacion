@@ -13,7 +13,7 @@
 
     <groupId>com.simulacion</groupId>
     <artifactId>productos-api</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <name>productos-api</name>
     <description>API de productos para simular estrategia de branching</description>
 
