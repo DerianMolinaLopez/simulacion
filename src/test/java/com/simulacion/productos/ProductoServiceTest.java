@@ -21,4 +21,10 @@ class ProductoServiceTest {
         ProductoService service = new ProductoService();
         assertThrows(IllegalArgumentException.class, () -> service.crear("  ", 10));
     }
+
+    @Test
+    void rechazaPrecioNegativo() {
+        ProductoService service = new ProductoService();
+        assertThrows(IllegalArgumentException.class, () -> service.crear("Monitor", -5));
+    }
 }
