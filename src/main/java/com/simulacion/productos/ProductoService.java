@@ -36,6 +36,12 @@ public class ProductoService {
         return producto;
     }
 
+    public List<Producto> buscarPorNombre(String texto) {
+        return productos.values().stream()
+                .filter(p -> StringUtils.containsIgnoreCase(p.nombre(), texto))
+                .toList();
+    }
+
     public double calcularTotal(List<Long> ids) {
         double total = 0;
         for (Long id : ids) {
