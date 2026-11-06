@@ -27,6 +27,9 @@ public class ProductoService {
         if (StringUtils.isBlank(nombre)) {
             throw new IllegalArgumentException("El nombre es obligatorio");
         }
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
+        }
         long id = secuencia.incrementAndGet();
         Producto producto = new Producto(id, nombre.trim(), precio);
         productos.put(id, producto);
